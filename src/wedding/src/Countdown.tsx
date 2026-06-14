@@ -21,7 +21,7 @@ export default function Countdown() {
     return () => clearInterval(intervalCountdown);
   }, []);
 
-  const formatTime = (time) => {
+  const formatTime = (time: number) => {
     const totalDays = Math.floor(time / (1000 * 60 * 60 * 24));
     const months = Math.floor(totalDays / 30.44);
     const daysAfterMonths = Math.floor(totalDays - months * 30.44);
