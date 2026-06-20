@@ -1,4 +1,10 @@
 import { Card, CardContent } from "@mui/material";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+
 import "./styles.scss";
 import Countdown from "./Countdown";
 
@@ -14,10 +20,73 @@ function App() {
               sx={{
                 width: "100%",
                 minHeight: "400px",
-                backgroundColor: "green",
+                backgroundColor: "white",
               }}
             >
-              <CardContent></CardContent>
+              <CardContent>
+                <Swiper
+                  navigation={true}
+                  modules={[Navigation, Pagination]}
+                  className="mySwiper"
+                  pagination={{ clickable: true }}
+                >
+                  <SwiperSlide>
+                    <Card
+                      sx={{
+                        width: "100%",
+                        minHeight: "400px",
+                        backgroundColor: "yellow",
+                      }}
+                    >
+                      <CardContent></CardContent>
+                    </Card>
+                  </SwiperSlide>
+                  <SwiperSlide>
+                    <Card
+                      sx={{
+                        width: "100%",
+                        minHeight: "400px",
+                        backgroundColor: "pink",
+                      }}
+                    >
+                      <CardContent></CardContent>
+                    </Card>
+                  </SwiperSlide>
+                  <SwiperSlide>
+                    <Card
+                      sx={{
+                        width: "100%",
+                        minHeight: "400px",
+                        backgroundColor: "green",
+                      }}
+                    >
+                      <CardContent></CardContent>
+                    </Card>
+                  </SwiperSlide>
+                  <SwiperSlide>
+                    <Card
+                      sx={{
+                        width: "100%",
+                        minHeight: "400px",
+                        backgroundColor: "blue",
+                      }}
+                    >
+                      <CardContent></CardContent>
+                    </Card>
+                  </SwiperSlide>
+                  <SwiperSlide>
+                    <Card
+                      sx={{
+                        width: "100%",
+                        minHeight: "400px",
+                        backgroundColor: "red",
+                      }}
+                    >
+                      <CardContent></CardContent>
+                    </Card>
+                  </SwiperSlide>
+                </Swiper>
+              </CardContent>
             </Card>
             <Card
               sx={{
